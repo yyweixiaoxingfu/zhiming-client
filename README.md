@@ -22,6 +22,12 @@
 大师咨询 · 会员与 VIP · 邀请分销 · 订单与支付（微信 / 支付宝 / 余额）·
 登录注册与找回密码 · 个人中心 · 客服
 
+## 界面预览
+
+| 首页 · 测算入口 | 八字精批报告 | 塔罗占卜 | 星座运势 |
+| --- | --- | --- | --- |
+| ![首页](./docs/images/app-home.png) | ![八字精批报告](./docs/images/app-bazi-report.png) | ![塔罗占卜](./docs/images/app-tarot.png) | ![星座运势](./docs/images/app-horoscope.png) |
+
 ## 技术栈
 
 - uni-app（Vue 2）
