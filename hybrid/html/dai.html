@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>IMA SDK 独立广告播放测试</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+				text-align: center;
+			}
+
+			#adContainer {
+				width: 640px;
+				height: 480px;
+				background-color: #000;
+				margin: 20px auto;
+				color: #fff;
+				line-height: 480px;
+				position: relative;
+			}
+
+			button {
+				padding: 10px 25px;
+				margin: 10px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+
+			#consoleLog {
+				width: 640px;
+				margin: 20px auto;
+				background: #f4f4f4;
+				padding: 15px;
+				text-align: left;
+				height: 120px;
+				overflow-y: auto;
+				font-family: monospace;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>IMA SDK 独立广告播放测试</h2>
+		<p>点击按钮，广告将直接在下方黑色区域播放。</p>
+
+		<!-- 广告播放容器 -->
+		<div id="adContainer">
+			<span>广告播放区域 (640x480)</span>
+		</div>
+
+		<br>
+		<button id="playAdButton">播放广告</button>
+		<button id="resetButton">重置</button>
+
+		<h4>事件与状态日志：</h4>
+		<div id="consoleLog"></div>
+
+		<!-- 1. 引入官方 IMA SDK -->
+		<script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+		<script type="text/javascript" src="/uni_modules/lz-epub/hybrid/html/js/uni.webview.1.5.6.js"></script>
+
+		<script>
+			// 2. 获取页面元素
+			const adContainer = document.getElementById('adContainer');
+			const playAdButton = document.getElementById('playAdButton');
+			const resetButton = document.getElementById('resetButton');
+			const consoleLog = document.getElementById('consoleLog');
+
+			let adsManager;
+			let adsLoader;
+			let adDisplayContainer;
+
+			// 日志函数
+			function log(message) {
+				const time = new Date().toLocaleTimeString();
+				consoleLog.innerHTML += `<div>[${time}] ${message}</div>`;
+				consoleLog.scrollTop = consoleLog.scrollHeight;
+			}
+
+			// 3. 初始化IMA SDK（核心变化：不绑定视频元素）
+			function initIMA() {
+				log("初始化 IMA SDK (独立广告模式)...");
+				// 创建一个虚拟的内容元素，IMA SDK 需要它但我们可以不显示
+				const dummyContent = document.createElement('div');
+				dummyContent.style.display = 'none';
+				document.body.appendChild(dummyContent);
+
+				// 创建AdDisplayContainer，将虚拟元素作为“内容”
+				adDisplayContainer = new google.ima.AdDisplayContainer(adContainer, dummyContent);
+				adsLoader = new google.ima.AdsLoader(adDisplayContainer);
+
+				// 监听广告加载成功事件
+				adsLoader.addEventListener(
+					google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,
+					onAdsManagerLoaded
+				);
+				// 监听广告错误事件
+				adsLoader.addEventListener(
+					google.ima.AdErrorEvent.Type.AD_ERROR,
+					onAdError
+				);
+
+				// 初始化容器
+				adDisplayContainer.initialize();
+				log("IMA SDK 独立广告模式初始化完成。");
+			}
+
+			// 4. 请求并加载广告
+			function requestAndPlayAd() {
+				log("--- 开始请求广告 ---");
+				// 清除可能存在的旧广告管理器
+				if (adsManager) {
+					adsManager.destroy();
+				}
+
+				// 创建广告请求
+				const adsRequest = new google.ima.AdsRequest();
+
+				// ★★★ 使用测试广告标签（可直接运行） ★★★
+				adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
+					'iu=/21775744923/external/single_ad_samples&sz=640x480&' +
+					'cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&' +
+					'gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=';
+
+				// ★★★ 若要使用自己的广告，请取消下一行注释并替换URL ★★★
+				// adsRequest.adTagUrl = 'https://your-ad-server.com/your-ad-tag';
+
+				// 设置广告容器的尺寸
+				adsRequest.linearAdSlotWidth = adContainer.clientWidth;
+				adsRequest.linearAdSlotHeight = adContainer.clientHeight;
+				adsRequest.nonLinearAdSlotWidth = adContainer.clientWidth;
+				adsRequest.nonLinearAdSlotHeight = adContainer.clientHeight;
+
+				// 发送请求
+				adsLoader.requestAds(adsRequest);
+				log("广告请求已发送。");
+			}
+
+			// 5. 广告管理器加载成功
+			function onAdsManagerLoaded(event) {
+				log("广告管理器加载成功。");
+				// 虚拟内容元素，仅用于构造 AdsManager
+				const dummyContent = document.createElement('div');
+				adsManager = event.getAdsManager(dummyContent);
+
+				// 监听广告事件
+				adsManager.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, onAdError);
+				adsManager.addEventListener(google.ima.AdEvent.Type.LOADED, () => log("广告素材已加载。"));
+				adsManager.addEventListener(google.ima.AdEvent.Type.STARTED, () => log("广告开始播放。"));
+				adsManager.addEventListener(google.ima.AdEvent.Type.COMPLETE, (res) => {
+					console.log('广告播放完毕。', res);
+					log("广告播放完毕。");
+					// uni.navigateBack()
+					adContainer.innerHTML = '<span>广告播放结束</span>';
+				});
+
+				// 初始化并开始播放广告
+				try {
+					adsManager.init(adContainer.clientWidth, adContainer.clientHeight, google.ima.ViewMode.NORMAL);
+					adsManager.start();
+				} catch (error) {
+					log(`播放广告时出错: ${error}`);
+				}
+			}
+
+			// 6. 广告错误处理
+			function onAdError(event) {
+				const error = event.getError();
+				log(`<span style="color: red;">广告错误: ${error.getMessage()}</span>`);
+				// 出错后清理并重置容器
+				if (adsManager) {
+					adsManager.destroy();
+					adsManager = null;
+				}
+				adContainer.innerHTML = '<span>广告加载或播放失败</span>';
+			}
+
+			// 7. 重置页面状态
+			function resetPage() {
+				log("重置页面状态...");
+				if (adsManager) {
+					adsManager.destroy();
+					adsManager = null;
+				}
+				// 重新初始化容器
+				adDisplayContainer.initialize();
+				adContainer.innerHTML = '<span>广告播放区域 (640x480)</span>';
+				log("已重置，可以再次播放广告。");
+			}
+
+			// 8. 绑定按钮事件
+			playAdButton.addEventListener('click', requestAndPlayAd);
+			resetButton.addEventListener('click', resetPage);
+
+			// 9. 页面加载完成后初始化
+			window.addEventListener('load', initIMA);
+			log("页面已加载，点击“播放广告”按钮开始。");
+		</script>
+	</body>
+</html>

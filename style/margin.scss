@@ -1,0 +1,97 @@
+$num: 0 1 2 3 4 5 6 7 8 9 10 11 12 14 16 20 24 28 32 36 40 44 48 52 56 60 64 72 80 96;
+
+.m-auto {
+	margin: auto;
+}
+.m-px {
+	margin: 1px;
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mx-px {
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.my-px {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+.mt-auto {
+	margin-top: auto;
+}
+.mt-px {
+	margin-top: 1px;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.mr-px {
+	margin-right: 1px;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+.mb-px {
+	margin-bottom: 1px;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.ml-px {
+	margin-left: 1px;
+}
+
+@each $i in $num {
+	.m-#{$i} {
+		margin: #{$i}rpx;
+	}
+	.-m-#{$i} {
+		margin: -#{$i}rpx;
+	}
+	.mx-#{$i} {
+		margin-left: #{$i}rpx;
+		margin-right: #{$i}rpx;
+	}
+	.-mx-#{$i} {
+		margin-left: -#{$i}rpx;
+		margin-right: -#{$i}rpx;
+	}
+	.my-#{$i} {
+		margin-top: #{$i}rpx;
+		margin-bottom: #{$i}rpx;
+	}
+	.-my-#{$i} {
+		margin-top: -#{$i}rpx;
+		margin-bottom: -#{$i}rpx;
+	}
+	.mt-#{$i} {
+		margin-top: #{$i}rpx;
+	}
+	.-mt-#{$i} {
+		margin-top: -#{$i}rpx;
+	}
+	.mr-#{$i} {
+		margin-right: #{$i}rpx;
+	}
+	.-mr-#{$i} {
+		margin-right: -#{$i}rpx;
+	}
+	.mb-#{$i} {
+		margin-bottom: #{$i}rpx;
+	}
+	.-mb-#{$i} {
+		margin-bottom: -#{$i}rpx;
+	}
+	.ml-#{$i} {
+		margin-left: #{$i}rpx;
+	}
+	.-ml-#{$i} {
+		margin-left: -#{$i}rpx;
+	}
+}

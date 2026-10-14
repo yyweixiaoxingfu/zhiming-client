@@ -1,0 +1,120 @@
+@keyframes btnAnimate {
+	0% {
+		transform: scale(.85);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(.85);
+	}
+}
+@keyframes zoom {
+	0% {
+		transform: scale(.8)
+	}
+	50% {
+		transform: scale(1)
+	}
+	100% {
+		transform: scale(.8)
+	}
+}
+@keyframes bounce-down {
+	25% {
+		transform: translateY(-20px)
+	}
+	100%, 50% {
+		transform: translateY(0)
+	}
+	75% {
+		transform: translateY(20px)
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate2 {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes star-fall {
+	0% {
+		opacity: 0;
+		transform: scale(0.5) translate3d(0, 0, 0);
+	}
+	50% {
+		opacity: 1;
+		transform: translate3d(-200px, 200px, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.2) translate3d(-300px, 300px, 0);
+	}
+}
+
+.delay250 {
+    animation-delay: .25s;
+}
+
+.delay500 {
+    animation-delay: .5s;
+}
+
+.delay750 {
+    animation-delay: .75s;
+}
+
+.delay1000 {
+    animation-delay: 1s;
+}
+
+.delay1250 {
+    animation-delay: 1.25s;
+}
+
+.delay1500 {
+    animation-delay: 1.5s;
+}
+
+.delay2000 {
+    animation-delay: 2s;
+}
+
+.delay2500 {
+    animation-delay: 2.5s;
+}
+
+.delay3000 {
+    animation-delay: 3s;
+}
+
+.delay4000 {
+    animation-delay: 4s;
+}
+
+.delay5000 {
+    animation-delay: 5s;
+}
+
+.delay6000 {
+    animation-delay: 6s;
+}
+
+.delay7000 {
+    animation-delay: 7s;
+}
+
+.delay8000 {
+    animation-delay: 8s;
+}

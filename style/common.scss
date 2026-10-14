@@ -1,0 +1,344 @@
+@import './flex.scss';
+@import './margin.scss';
+@import './display.scss';
+@import './animation.scss';
+
+page {
+	height: 100%;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+image {
+	vertical-align: middle;
+}
+scroll-view ::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+}
+button {
+	border: none;
+	&::after {
+		border: none;
+	}
+}
+
+input {
+	background: transparent !important;
+}
+
+// .u-icon {
+// 	display: inline !important;
+// }
+// .u-icon__icon {
+// 	display: inline !important;
+// }
+
+.text_white {
+	color: #FFFFFF;
+}
+
+.btnHover {
+	background-color: #EEEEEE !important;
+}
+
+.primaryText {
+	color: $primary-color !important;
+}
+.redText {
+	color: $red-color !important;
+}
+.orangeText {
+	color: $warning-color !important;
+}
+.greyText {
+	color: #666666 !important;
+}
+.greenText {
+	color: #0e9e3d !important;
+}
+.grey-text-9 {
+	color: #999 !important;
+}
+// .bg-primary {
+// 	background-color: $u-primary-dark
+// }
+// .bg-warning {
+// 	background-color: $u-warning-dark
+// }
+// .bg-success {
+// 	background-color: $u-success-dark
+// }
+
+.bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-top-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 750rpx;
+}
+
+// 空白页
+.noContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 200rpx 0;
+	.noContentImage{
+		width: 400rpx;
+	}
+	.text {
+		font-size: 28rpx;
+		color: #666666;
+		padding-top: 32rpx;
+	}
+}
+
+/* 单选框样式 */
+.radio {
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 50%;
+	border: 1rpx solid #cfcfcf;
+	background-color: #e5e5e5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&.active {
+		border-color: $primary-color;
+		background-color: $primary-color;
+	}
+}
+
+/* 单选框样式 - 2 */
+.checkbox-mark {
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 50%;
+	border: 1rpx solid #cfcfcf;
+	background-color: #e5e5e5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&.active {
+		border-color: $primary-color;
+		background-color: $primary-color;
+	}
+}
+
+// 协议
+.protocol-radio {
+	.checkbox {
+		width: 36rpx;
+		height: 36rpx;
+		border-radius: 50%;
+		border: 1rpx solid #666666;
+		background-color: #fff;
+		display: inline-block;
+		position: relative;
+	}
+	.text {
+		display: inline;
+		margin-left: 14rpx;
+		font-size: 28rpx;
+		line-height: 40rpx;
+		vertical-align: top;
+		.link {
+			color: $primary-color;
+		}
+	}
+	&.active {
+		.checkbox {
+			border-color: $primary-color;
+			&::after {
+				content: '';
+				display: block;
+				width: 20rpx;
+				height: 20rpx;
+				border-radius: 50%;
+				background-color: $primary-color;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.checkbox-box {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 6rpx;
+	border: 1rpx solid #e4e4e4;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// 自定义轮播图数字指示器
+.indicator-num {
+	// width: 68rpx;
+	height: 32rpx;
+	border-radius: 100rpx;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	color: #FFFFFF;
+	font-size: 24rpx;
+	.left, .right {
+		padding: 0 12rpx;
+		flex: 1;
+		height: 40rpx;
+		line-height: 40rpx;
+		text-align: center;
+		transform: rotate(8deg);
+	}
+	.left {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.right {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	text {
+		display: inline-block;
+		transform: rotate(-8deg);
+	}
+}
+
+.modal-btn {
+	border-top: 1px solid #373737;
+	.btn {
+		border-radius: 0;
+		background-color: transparent;
+		&__close {
+			color: #aaaaaa;
+			font-size: 36rpx;
+			font-weight: bold;
+		}
+		&__login {
+			color: #808fa6;
+			font-size: 36rpx;
+			font-weight: bold;
+			border-left: 1px solid #373737;
+		}
+	}
+}
+
+.u-tabbar {
+	.u-tabbar__content__item-wrapper {
+		box-sizing: border-box;
+		height: 58px !important;
+		padding-bottom: 10px !important;
+	}
+	.u-icon__img {
+		width: 28px !important;
+		height: 28px !important;
+	}
+	.u-tabbar-item__text {
+		margin-top: -5px !important;
+	}
+}
+
+// 进度条
+.u-line-progress__line {
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+	background-size: 40rpx 40rpx;
+	animation: striped-flow 3s linear infinite;
+}
+@keyframes striped-flow {
+	0% {
+		background-position: -100%;
+	}
+	100% {
+		background-position: 100%;
+	}
+}
+
+.loading-box {
+	width: 64rpx;
+	height: 64rpx;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	.loading {
+		display: block;
+		box-sizing: border-box;
+		width: 64rpx;
+		height: 64rpx;
+		border: 4rpx solid #000;
+		border-top-color: transparent;
+		border-radius: 100%;
+		animation: circle infinite 0.75s linear;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.iconfont {
+		color: #000;
+		font-size: 32rpx !important;
+	}
+}
+@keyframes circle {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.tabbar-placeholder {
+	height: 66px;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.agent-input {
+	box-sizing: border-box;
+	padding: 24rpx;
+	min-height: 100%;
+	background-color: $bg-color;
+	.card-box {
+		padding: 6rpx 22rpx 22rpx;
+		border-radius: 20rpx;
+		background-color: #fff;
+	}
+	.bottom-box {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		height: 120rpx;
+		background-color: #fff;
+		padding-left: 24rpx;
+		padding-right: 24rpx;
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+		display: flex;
+		align-items: center;
+		.btn {
+			flex: 1;
+			height: 92rpx;
+			border-radius: 92rpx;
+			color: #fff;
+			font-size: 32rpx;
+			line-height: 92rpx;
+			background: linear-gradient(90deg, #2e77eb, #2eb8eb);
+		}
+	}
+}

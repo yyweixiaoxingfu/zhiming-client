@@ -1,0 +1,683 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "联系客服"
+			}
+		}, {
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "历史订单"
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "会员分销"
+			}
+		}, {
+			"path": "pages/index/shengxiao",
+			"style": {
+				"navigationBarTitleText": "生肖运势"
+			}
+		}, {
+			"path": "pages/index/bazijp",
+			"style": {
+				"navigationBarTitleText": "八字精批"
+			}
+		}, {
+			"path": "pages/index/jinnian",
+			"style": {
+				"navigationBarTitleText": "流年运势"
+			}
+		}, {
+			"path": "pages/index/bazizh",
+			"style": {
+				"navigationBarTitleText": "生辰详批"
+			}
+		}, {
+			"path": "pages/index/hehun",
+			"style": {
+				"navigationBarTitleText": "八字合婚"
+			}
+		}, {
+			"path": "pages/index/yinyuancs",
+			"style": {
+				"navigationBarTitleText": "姻缘分析"
+			}
+		}, {
+			"path": "pages/index/xmpd",
+			"style": {
+				"navigationBarTitleText": "姓名配对"
+			}
+		}, {
+			"path": "pages/index/bazi",
+			"style": {
+				"navigationBarTitleText": "财运分析"
+			}
+		}, {
+			"path": "pages/index/hmjx",
+			"style": {
+				"navigationBarTitleText": "号码吉凶"
+			}
+		}, {
+			"path": "pages/index/ziwei",
+			"style": {
+				"navigationBarTitleText": "紫微斗数"
+			}
+		}, {
+			"path": "pages/index/bazixmjq",
+			"style": {
+				"navigationBarTitleText": "姓名详批"
+			}
+		}, {
+			"path": "pages/index/ffqm",
+			"style": {
+				"navigationBarTitleText": "宝宝取名"
+			}
+		}, {
+			"path": "pages/index/taluoyunshi",
+			"style": {
+				"navigationBarTitleText": "塔罗运势"
+			}
+		}, {
+			"path": "pages/index/taluoyunshiFind",
+			"style": {
+				"navigationBarTitleText": "塔罗运势"
+			}
+		}, {
+			"path": "pages/index/taluofuhe",
+			"style": {
+				"navigationBarTitleText": "塔罗复合"
+			}
+		}, {
+			"path": "pages/index/taluofuheFind",
+			"style": {
+				"navigationBarTitleText": "塔罗复合"
+			}
+		}, {
+			"path": "pages/index/taluotuodan",
+			"style": {
+				"navigationBarTitleText": "塔罗脱单"
+			}
+		}, {
+			"path": "pages/index/taluotuodanFind",
+			"style": {
+				"navigationBarTitleText": "塔罗脱单"
+			}
+		}, {
+			"path": "pages/index/taluoanlian",
+			"style": {
+				"navigationBarTitleText": "塔罗暗恋"
+			}
+		}, {
+			"path": "pages/index/taluoanlianFind",
+			"style": {
+				"navigationBarTitleText": "塔罗暗恋"
+			}
+		}, {
+			"path": "pages/index/bzyy",
+			"style": {
+				"navigationBarTitleText": "八字姻缘"
+			}
+		}, {
+			"path": "pages/index/dashi",
+			"style": {
+				"navigationBarTitleText": "大师一对一"
+			}
+		}, {
+			"path": "pages/index/dashiForm",
+			"style": {
+				"navigationBarTitleText": "大师一对一"
+			}
+		}, {
+			"path": "pages/index/taluoaiqing",
+			"style": {
+				"navigationBarTitleText": "塔罗爱情"
+			}
+		}, {
+			"path": "pages/index/taluoaiqingFind",
+			"style": {
+				"navigationBarTitleText": "塔罗爱情"
+			}
+		}, {
+			"path": "pages/my/share",
+			"style": {
+				"navigationBarTitleText": "推广海报"
+			}
+		}, {
+			"path": "pages/my/vip",
+			"style": {
+				"navigationBarTitleText": "购买VIP会员"
+			}
+		}, {
+			"path": "pages/my/promotionRecord",
+			"style": {
+				"navigationBarTitleText": "推广记录"
+			}
+		}, {
+			"path": "pages/my/pointsRecord",
+			"style": {
+				"navigationBarTitleText": "积分明细"
+			}
+		}, {
+			"path": "pages/my/calculation",
+			"style": {
+				"navigationBarTitleText": "我的测算"
+			}
+		}, {
+			"path": "pages/my/userInfo",
+			"style": {
+				"navigationBarTitleText": "用户信息"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/login/resetPassword",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/index/article",
+			"style": {
+				"navigationBarTitleText": "文章"
+			}
+		}, {
+			"path": "pages/index/expert",
+			"style": {
+				"navigationBarTitleText": "专家"
+			}
+		}, {
+			"path": "pages/index/zidian",
+			"style": {
+				"navigationBarTitleText": "中华字库"
+			}
+		}, {
+			"path": "pages/index/xiaoliuren",
+			"style": {
+				"navigationBarTitleText": "六壬起卦"
+			}
+		}, {
+			"path": "pages/index/xingzuo",
+			"style": {
+				"navigationBarTitleText": "星座分析"
+			}
+		}, {
+			"path": "pages/index/xingzuointerim",
+			"style": {
+				"navigationBarTitleText": "星座分析"
+			}
+		}, {
+			"path": "pages/index/taluozuihou",
+			"style": {
+				"navigationBarTitleText": "塔罗最后"
+			}
+		}, {
+			"path": "pages/index/taluozuihouFind",
+			"style": {
+				"navigationBarTitleText": "塔罗最后"
+			}
+		}, {
+			"path": "pages/index/taluoxinli",
+			"style": {
+				"navigationBarTitleText": "塔罗心里"
+			}
+		}, {
+			"path": "pages/index/taluoxinliFind",
+			"style": {
+				"navigationBarTitleText": "塔罗心里"
+			}
+		}, {
+			"path": "pages/index/taluojixu",
+			"style": {
+				"navigationBarTitleText": "塔罗继续"
+			}
+		}, {
+			"path": "pages/index/taluojixuFind",
+			"style": {
+				"navigationBarTitleText": "塔罗继续"
+			}
+		}, {
+			"path": "pages/index/taluofenshou",
+			"style": {
+				"navigationBarTitleText": "塔罗分手"
+			}
+		}, {
+			"path": "pages/index/taluofenshouFind",
+			"style": {
+				"navigationBarTitleText": "塔罗分手"
+			}
+		}, {
+			"path": "pages/index/taluobieren",
+			"style": {
+				"navigationBarTitleText": "塔罗别人"
+			}
+		}, {
+			"path": "pages/index/taluobierenFind",
+			"style": {
+				"navigationBarTitleText": "塔罗别人"
+			}
+		}, {
+			"path": "pages/index/dashiList",
+			"style": {
+				"navigationBarTitleText": "大师"
+			}
+		}, {
+			"path": "pages/checkIn/checkIn",
+			"style": {
+				"navigationBarTitleText": "签到"
+			}
+		}, {
+			"path": "pages/my/number",
+			"style": {
+				"navigationBarTitleText": "次数"
+			}
+		}, {
+			"path": "pages/my/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		}, {
+			"path": "pages/my/collect",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+		}, {
+			"path": "pages/my/like",
+			"style": {
+				"navigationBarTitleText": "我的点赞"
+			}
+		}, {
+			"path": "pages/my/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		}, {
+			"path": "pages/my/setting/editPay",
+			"style": {
+				"navigationBarTitleText": "支付密码"
+			}
+		}, {
+			"path": "pages/my/setting/editPhone",
+			"style": {
+				"navigationBarTitleText": "更改手机号"
+			}
+		}, {
+			"path": "pages/my/setting/editEmail",
+			"style": {
+				"navigationBarTitleText": "更换邮箱"
+			}
+		}, {
+			"path": "pages/my/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/login/registerProtocol",
+			"style": {
+				"navigationBarTitleText": "注册协议"
+			}
+		}, {
+			"path": "pages/index/book",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/my/questions",
+			"style": {
+				"navigationBarTitleText": "常见问题"
+			}
+		},
+		{
+			"path": "pages/my/questionsDetail",
+			"style": {
+				"navigationBarTitleText": "问题详情"
+			}
+		},
+		{
+			"path": "pages/my/protocol",
+			"style": {
+				"navigationBarTitleText": "服务声明及隐私条款"
+			}
+		},
+		{
+			"path": "pages/index/ad",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "pages/payment",
+		"pages": [{
+			"path": "shengxiao",
+			"style": {
+				"navigationBarTitleText": "生肖运势"
+			}
+		}, {
+			"path": "taluoyunshi",
+			"style": {
+				"navigationBarTitleText": "塔罗运势"
+			}
+		}, {
+			"path": "ziwei",
+			"style": {
+				"navigationBarTitleText": "紫微斗数"
+			}
+		}, {
+			"path": "bazijp",
+			"style": {
+				"navigationBarTitleText": "八字精批"
+			}
+		}, {
+			"path": "bazizh",
+			"style": {
+				"navigationBarTitleText": "生辰详批"
+			}
+		}, {
+			"path": "hehun",
+			"style": {
+				"navigationBarTitleText": "八字合婚"
+			}
+		}, {
+			"path": "yinyuancs",
+			"style": {
+				"navigationBarTitleText": "姻缘分析"
+			}
+		}, {
+			"path": "xmpd",
+			"style": {
+				"navigationBarTitleText": "姓名配对"
+			}
+		}, {
+			"path": "bazi",
+			"style": {
+				"navigationBarTitleText": "财运分析"
+			}
+		}, {
+			"path": "hmjx",
+			"style": {
+				"navigationBarTitleText": "号码吉凶"
+			}
+		}, {
+			"path": "bazixmjq",
+			"style": {
+				"navigationBarTitleText": "姓名详批"
+			}
+		}, {
+			"path": "ffqm",
+			"style": {
+				"navigationBarTitleText": "宝宝取名"
+			}
+		}, {
+			"path": "taluofuhe",
+			"style": {
+				"navigationBarTitleText": "塔罗复合"
+			}
+		}, {
+			"path": "taluotuodan",
+			"style": {
+				"navigationBarTitleText": "塔罗脱单"
+			}
+		}, {
+			"path": "taluoanlian",
+			"style": {
+				"navigationBarTitleText": "塔罗暗恋"
+			}
+		}, {
+			"path": "bzyy",
+			"style": {
+				"navigationBarTitleText": "八字姻缘"
+			}
+		}, {
+			"path": "dashi",
+			"style": {
+				"navigationBarTitleText": "大师"
+			}
+		}, {
+			"path": "taluoaiqing",
+			"style": {
+				"navigationBarTitleText": "塔罗爱情"
+			}
+		}, {
+			"path": "zidian",
+			"style": {
+				"navigationBarTitleText": "中华字库"
+			}
+		}, {
+			"path": "xingzuo",
+			"style": {
+				"navigationBarTitleText": "星座分析"
+			}
+		}, {
+			"path": "taluozuihou",
+			"style": {
+				"navigationBarTitleText": "塔罗最后"
+			}
+		}, {
+			"path": "taluoxinli",
+			"style": {
+				"navigationBarTitleText": "塔罗心里"
+			}
+		}, {
+			"path": "taluojixu",
+			"style": {
+				"navigationBarTitleText": "塔罗继续"
+			}
+		}, {
+			"path": "taluofenshou",
+			"style": {
+				"navigationBarTitleText": "塔罗分手"
+			}
+		}, {
+			"path": "taluobieren",
+			"style": {
+				"navigationBarTitleText": "塔罗别人"
+			}
+		}, {
+			"path": "jinnian",
+			"style": {
+				"navigationBarTitleText": "流年运势"
+			}
+		}, {
+			"path": "xiaoliuren",
+			"style": {
+				"navigationBarTitleText": "六壬起卦"
+			}
+		}, {
+			"path": "paySuccess",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "wxPay",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	]
+	}, {
+		"root": "pages/result",
+		"pages": [{
+			"path": "hehun",
+			"style": {
+				"navigationBarTitleText": "八字合婚"
+			}
+		}, {
+			"path": "bazijp",
+			"style": {
+				"navigationBarTitleText": "八字精批"
+			}
+		}, {
+			"path": "bazizh",
+			"style": {
+				"navigationBarTitleText": "生辰详批"
+			}
+		}, {
+			"path": "ffqm",
+			"style": {
+				"navigationBarTitleText": "宝宝取名"
+			}
+		}, {
+			"path": "hmjx",
+			"style": {
+				"navigationBarTitleText": "号码吉凶"
+			}
+		}, {
+			"path": "xmpd",
+			"style": {
+				"navigationBarTitleText": "姓名配对"
+			}
+		}, {
+			"path": "ziwei",
+			"style": {
+				"navigationBarTitleText": "紫微斗数"
+			}
+		}, {
+			"path": "bazixmjq",
+			"style": {
+				"navigationBarTitleText": "姓名详批"
+			}
+		}, {
+			"path": "shengxiao",
+			"style": {
+				"navigationBarTitleText": "生肖运势"
+			}
+		}, {
+			"path": "jinnian",
+			"style": {
+				"navigationBarTitleText": "流年运势"
+			}
+		}, {
+			"path": "yinyuancs",
+			"style": {
+				"navigationBarTitleText": "姻缘分析"
+			}
+		}, {
+			"path": "bazi",
+			"style": {
+				"navigationBarTitleText": "财运分析"
+			}
+		}, {
+			"path": "xingzuo",
+			"style": {
+				"navigationBarTitleText": "星座分析"
+			}
+		}, {
+			"path": "taluofuhe",
+			"style": {
+				"navigationBarTitleText": "塔罗复合"
+			}
+		}, {
+			"path": "taluozuihou",
+			"style": {
+				"navigationBarTitleText": "塔罗最后"
+			}
+		}, {
+			"path": "taluoxinli",
+			"style": {
+				"navigationBarTitleText": "塔罗心里"
+			}
+		}, {
+			"path": "taluojixu",
+			"style": {
+				"navigationBarTitleText": "塔罗继续"
+			}
+		}, {
+			"path": "taluofenshou",
+			"style": {
+				"navigationBarTitleText": "塔罗分手"
+			}
+		}, {
+			"path": "taluobieren",
+			"style": {
+				"navigationBarTitleText": "塔罗别人"
+			}
+		}, {
+			"path": "taluoaiqing",
+			"style": {
+				"navigationBarTitleText": "塔罗爱情"
+			}
+		}, {
+			"path": "taluoanlian",
+			"style": {
+				"navigationBarTitleText": "塔罗暗恋"
+			}
+		}, {
+			"path": "taluotuodan",
+			"style": {
+				"navigationBarTitleText": "塔罗脱单"
+			}
+		}, {
+			"path": "taluoyunshi",
+			"style": {
+				"navigationBarTitleText": "塔罗运势"
+			}
+		}, {
+			"path": "xiaoliuren",
+			"style": {
+				"navigationBarTitleText": "六壬起卦"
+			}
+		}]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"h5": {
+			"navigationStyle": "custom",
+			"maxWidth": 750
+		}
+	},
+	"tabBar": {
+		"color": "#9a9a9a",
+		"selectedColor": "#ff5c28",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/tabbar/menu01a.png",
+			"selectedIconPath": "/static/tabbar/menu01b.png",
+			"text": "测算大全"
+		}, {
+			"pagePath": "pages/checkIn/checkIn",
+			"iconPath": "/static/tabbar/menu05a.png",
+			"selectedIconPath": "/static/tabbar/menu05b.png",
+			"text": "签到"
+		}, {
+			"pagePath": "pages/service/service",
+			"iconPath": "/static/tabbar/menu02a.png",
+			"selectedIconPath": "/static/tabbar/menu02b.png",
+			"text": "联系客服"
+		}, {
+			"pagePath": "pages/order/order",
+			"iconPath": "/static/tabbar/menu03a.png",
+			"selectedIconPath": "/static/tabbar/menu03b.png",
+			"text": "历史订单"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "/static/tabbar/menu04a.png",
+			"selectedIconPath": "/static/tabbar/menu04b.png",
+			"text": "个人中心"
+		}]
+	},
+	"uniIdRouter": {}
+}
